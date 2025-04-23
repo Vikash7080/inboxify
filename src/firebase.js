@@ -3,19 +3,30 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+ const API_KEY = import.meta.env.VITE_API_KEY;
+ const AUTH_DOMAIN = import.meta.env.VITE_AUTH_DOMAIN;
+ const PROJECT_ID = import.meta.env.VITE_PROJECT_ID;
+ const STORAGE_BUCKET = import.meta.env.VITE_STORAGE_BUCKET;
+ const MESSAGING_SENDER_ID = import.meta.env.VITE_MESSAGING_SENDER_ID;
+ const APP_ID = import.meta.env.VITE_APP_ID;
+ const MEASUREMENT_ID = import.meta.env.VITE_MEASUREMENT_ID ;
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyBcPyVf6leq4tdUtJeGFgn38O8KYQ1MHfc",
-  authDomain: "inboxify-app.firebaseapp.com",
-  projectId: "inboxify-app",
-  storageBucket: "inboxify-app.firebasestorage.app",
-  messagingSenderId: "729415754850",
-  appId: "1:729415754850:web:a07c0214955e9023661d3b",
-  measurementId: "G-PR3L15HJDH"
+ apiKey: API_KEY,
+  authDomain:AUTH_DOMAIN ,
+  projectId:PROJECT_ID,
+  storageBucket:STORAGE_BUCKET,
+  messagingSenderId:MESSAGING_SENDER_ID,
+  appId: APP_ID,
+  measurementId: MEASUREMENT_ID
 };
 
 // Initialize Firebase
